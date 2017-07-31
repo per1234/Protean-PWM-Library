@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map Strain
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+Protean	KEYWORD1	Protean
+PWM	KEYWORD1	PWM
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+getTimings	KEYWORD2
+setTimings	KEYWORD2
+getTiming	KEYWORD2
+setTiming	KEYWORD2
+setEcho	KEYWORD2
+reset	KEYWORD2
+checkVersion	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
