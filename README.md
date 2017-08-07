@@ -10,7 +10,11 @@ For a hookup guide, please go checkout the [product page](http://www.protean.io/
 Open up the Arduino IDE, make sure the sketch that was opened has been saved. After that click **Sketch -> Show Sketch Folder**. This will bring you to your sketch's location on your computer.
 ![Sketch folder](http://www.protean.io/imgs/tutorials/pwm-logger/31-find-sketch-folder.png)
 
-Next, navigate back one directory. This will bring you to your sketchbook directory. It should contain a folder called libraries. Navigate into libraries then use git to clone Protean-PWM-Library into the libraries directory. Once that's done, restart the Arduino IDE.
+Next, navigate back one directory. This will bring you to your sketchbook directory. It should contain a folder called libraries. Navigate into libraries then use git to clone Protean-PWM-Library into the libraries directory. Once that's done, restart the Arduino IDE. You will then be able to include the library in your sketch like so.
+
+```c++
+#include <PWM.h>
+```
 
 ## API Examples
 
