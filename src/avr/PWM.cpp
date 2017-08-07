@@ -61,7 +61,7 @@ bool Protean::PWM::readTimings(uint8_t start_channel, int count, unsigned int ti
 }
 
 
-bool Protean::PWM::readTimingsRaw(uint8_t start_channel, int count, uint8_t timings[])
+bool Protean::PWM::readTimingsRaw(uint8_t start_channel, int count, unsigned int timings[])
 {
 	Wire.beginTransmission(addr);
 	Wire.write(start_channel);
@@ -86,7 +86,7 @@ bool Protean::PWM::readTimingsRaw(uint8_t start_channel, int count, uint8_t timi
 
 int Protean::PWM::readTiming(uint8_t channel)
 {
-	int timing = 0;
+	unsigned int timing = 0;
 	if(readTimings(channel, 1, &timing))
 	{
 		return timing;
@@ -98,7 +98,7 @@ int Protean::PWM::readTiming(uint8_t channel)
 
 int Protean::PWM::readTimingRaw(uint8_t channel)
 {
-	uint8_t timing = 0;
+	unsigned int timing = 0;
 	if(readTimingsRaw(channel, 1, &timing))
 	{
 		return timing;
@@ -108,13 +108,13 @@ int Protean::PWM::readTimingRaw(uint8_t channel)
 }
 
 
-bool Protean::PWM::writeTiming(uint8_t channel, int timing)
+bool Protean::PWM::writeTiming(uint8_t channel, unsigned int timing)
 {
 	return writeTimings(channel, 1, &timing);
 }
 
 
-bool Protean::PWM::writeTimingRaw(uint8_t channel, uint8_t timing)
+bool Protean::PWM::writeTimingRaw(uint8_t channel, unsigned int timing)
 {
 	return writeTimingsRaw(channel, 1, &timing);
 }
@@ -142,7 +142,7 @@ bool Protean::PWM::writeTimings(uint8_t start_channel, int count, unsigned int t
 }
 
 
-bool Protean::PWM::writeTimingsRaw(uint8_t start_channel, int count, uint8_t timings[])
+bool Protean::PWM::writeTimingsRaw(uint8_t start_channel, int count, unsigned int timings[])
 {
 
 	Wire.beginTransmission(addr);

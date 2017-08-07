@@ -68,7 +68,7 @@ public:
 	 * @param  timings       Pointer to an array of timings
 	 * @return               true on success, false otherwise.
 	 */
-	bool readTimingsRaw(uint8_t start_channel, int count, uint8_t timings[]);
+	bool readTimingsRaw(uint8_t start_channel, int count, unsigned int timings[]);
 
 	/**
 	 * Reads raw timing of channel from the logger.
@@ -95,7 +95,7 @@ public:
 	 * @param  timing  timing in microseconds.
 	 * @return         true on success, false otherwise.
 	 */
-	bool writeTiming(uint8_t channel, int timing);
+	bool writeTiming(uint8_t channel, unsigned int timing);
 
 	/**
 	 * Writes raw timings to the logger for 'count' channels
@@ -106,7 +106,7 @@ public:
 	 * @param  timings       Pointer to an array of timings
 	 * @return               true on success, false otherwise.
 	 */
-	bool writeTimingsRaw(uint8_t start_channel, int count, uint8_t timings[]);
+	bool writeTimingsRaw(uint8_t start_channel, int count, unsigned int timings[]);
 
 	/**
 	 * Writes a raw 'timing' to 'channel'. The logger must have
@@ -115,7 +115,7 @@ public:
 	 * @param  timing  timing.
 	 * @return         true on success, false otherwise.
 	 */
-	bool writeTimingRaw(uint8_t channel, uint8_t timing);
+	bool writeTimingRaw(uint8_t channel, unsigned int timing);
 
 	/**
 	 * Changes the 'echo mode' of the logger.
