@@ -40,7 +40,7 @@ Protean::PWM::PWM(int addr)
 bool Protean::PWM::readTimings(uint8_t start_channel, int count, unsigned int timings[])
 {
 	Wire.beginTransmission(addr);
-	Wire.write(start_channel);
+	Wire.write(start_channel + 1);
 	if(Wire.endTransmission())
 	{
 		return false;
@@ -64,7 +64,7 @@ bool Protean::PWM::readTimings(uint8_t start_channel, int count, unsigned int ti
 bool Protean::PWM::readTimingsRaw(uint8_t start_channel, int count, unsigned int timings[])
 {
 	Wire.beginTransmission(addr);
-	Wire.write(start_channel);
+	Wire.write(start_channel + 1);
 	if(Wire.endTransmission())
 	{
 		return false;
@@ -124,7 +124,7 @@ bool Protean::PWM::writeTimings(uint8_t start_channel, int count, unsigned int t
 {
 
 	Wire.beginTransmission(addr);
-	Wire.write(start_channel);
+	Wire.write(start_channel + 1);
 	for(int i = 0; i < count; ++i)
 	{
 		// Convert from microseconds to cycles with reduced fidelity
@@ -146,7 +146,7 @@ bool Protean::PWM::writeTimingsRaw(uint8_t start_channel, int count, unsigned in
 {
 
 	Wire.beginTransmission(addr);
-	Wire.write(start_channel);
+	Wire.write(start_channel + 1);
 	for(int i = 0; i < count; ++i)
 	{
 		Wire.write(timings[i]);
