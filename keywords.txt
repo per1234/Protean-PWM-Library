@@ -5,8 +5,8 @@
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-Protean	KEYWORD1	Protean
-PWM	KEYWORD1	PWM
+Protean	KEYWORD1
+PWM	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
